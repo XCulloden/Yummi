@@ -17,6 +17,7 @@ struct ingredient {
         
         return """
             \(name)
+
 quantity: \(quantity)
 expiry: \(expiry)
 type: \(type)
