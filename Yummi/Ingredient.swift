@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ingredient {
+struct Ingredient {
     let name: String
     var quantity: Int
     let expiry: String
