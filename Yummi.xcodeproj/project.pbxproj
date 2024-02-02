@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B10E4312B6D57760077E22B /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E4302B6D57760077E22B /* RecipesView.swift */; };
+		5B10E4352B6D58EC0077E22B /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E4342B6D58EC0077E22B /* Recipes.swift */; };
 		5B54A7872B5FC5C500A6EF2D /* YummiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7862B5FC5C500A6EF2D /* YummiApp.swift */; };
 		5B54A7892B5FC5C500A6EF2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7882B5FC5C500A6EF2D /* ContentView.swift */; };
 		5B54A78B2B5FC5C700A6EF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B54A78A2B5FC5C700A6EF2D /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B10E4302B6D57760077E22B /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		5B10E4342B6D58EC0077E22B /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		5B54A7832B5FC5C500A6EF2D /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B54A7862B5FC5C500A6EF2D /* YummiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiApp.swift; sourceTree = "<group>"; };
 		5B54A7882B5FC5C500A6EF2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B10E4322B6D58040077E22B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */,
+				5B10E4342B6D58EC0077E22B /* Recipes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B10E4332B6D580D0077E22B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B54A7882B5FC5C500A6EF2D /* ContentView.swift */,
+				5B54A7862B5FC5C500A6EF2D /* YummiApp.swift */,
+				5B10E4302B6D57760077E22B /* RecipesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B54A77A2B5FC5C500A6EF2D = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +120,8 @@
 		5B54A7852B5FC5C500A6EF2D /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
-				5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */,
-				5B54A7862B5FC5C500A6EF2D /* YummiApp.swift */,
-				5B54A7882B5FC5C500A6EF2D /* ContentView.swift */,
+				5B10E4332B6D580D0077E22B /* View */,
+				5B10E4322B6D58040077E22B /* Model */,
 				5B54A78A2B5FC5C700A6EF2D /* Assets.xcassets */,
 				5B54A78C2B5FC5C700A6EF2D /* Yummi.entitlements */,
 				5B54A78D2B5FC5C700A6EF2D /* Preview Content */,
@@ -263,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B54A7B42B5FC8FF00A6EF2D /* Ingredient.swift in Sources */,
+				5B10E4352B6D58EC0077E22B /* Recipes.swift in Sources */,
 				5B54A7892B5FC5C500A6EF2D /* ContentView.swift in Sources */,
+				5B10E4312B6D57760077E22B /* RecipesView.swift in Sources */,
 				5B54A7872B5FC5C500A6EF2D /* YummiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
