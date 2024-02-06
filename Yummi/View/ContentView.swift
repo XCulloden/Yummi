@@ -40,7 +40,11 @@ struct ContentView: View {
                     } label: {
                         Text("previous")
                     }
-                    
+                    NavigationLink {
+                        RecipesView()
+                    } label: {
+                        Label("Recipes", systemImage: "folder")
+                    }
                     
                 }
                 Form{
@@ -93,13 +97,15 @@ struct ContentView: View {
                     }, label: {
                         Text("Sumbmit Ingredient")
                     })
+                    
                 }
+
+                    
                 
             }
         }
     }
 }
-    
 #Preview {
     ContentView()
 }

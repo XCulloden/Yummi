@@ -7,24 +7,29 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Identifiable {
     let name: String
     var ingredients: [Ingredient] = []
     let isFavourite: Bool
     let rating: Int
     
-    func displayStats() -> String {
-        
-        return """
-            \(name)
-
-quantity: \(quantity)
-expiry: \(expiry)
-type: \(type)
-
-
-"""
-        
-        
+    var id: String {
+        name
     }
+    
+    
+//    func displayStats() -> String {
+//        
+//        return """
+//            \(name)
+//
+//quantity: \(quantity)
+//expiry: \(expiry)
+//type: \(type)
+//
+//
+//"""
+        
+        
+    //}
 }
