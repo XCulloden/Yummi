@@ -17,6 +17,7 @@
 		5B54A7A32B5FC5C800A6EF2D /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7A22B5FC5C800A6EF2D /* YummiUITests.swift */; };
 		5B54A7A52B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7A42B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift */; };
 		5B54A7B42B5FC8FF00A6EF2D /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */; };
+		5BE200FC2B84B3AF0026ECF0 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE200FB2B84B3AF0026ECF0 /* IngredientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5B54A7A22B5FC5C800A6EF2D /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		5B54A7A42B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		5BE200FB2B84B3AF0026ECF0 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5B54A7882B5FC5C500A6EF2D /* ContentView.swift */,
+				5BE200FB2B84B3AF0026ECF0 /* IngredientsView.swift */,
 				5B54A7862B5FC5C500A6EF2D /* YummiApp.swift */,
 				5B10E4302B6D57760077E22B /* RecipesView.swift */,
 			);
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B54A7B42B5FC8FF00A6EF2D /* Ingredient.swift in Sources */,
+				5BE200FC2B84B3AF0026ECF0 /* IngredientsView.swift in Sources */,
 				5B10E4352B6D58EC0077E22B /* Recipes.swift in Sources */,
 				5B54A7892B5FC5C500A6EF2D /* ContentView.swift in Sources */,
 				5B10E4312B6D57760077E22B /* RecipesView.swift in Sources */,

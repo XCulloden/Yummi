@@ -16,7 +16,7 @@ struct Ingredient {
     func displayStats() -> String {
         
         return """
-            \(name)
+        \(name)
 
 quantity: \(quantity)
 expiry: \(expiry)
