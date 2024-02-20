@@ -13,7 +13,7 @@ struct IngredientsView: View {
     @State private var ingredientIndex = 0
     
     @State private var ingredientNameInput = ""
-    @State private var ingredientCountInput = Int()
+    @State private var ingredientCountInput = 1
     @State private var ingredientDateInput = Date()
     @State private var ingredientTypeInput = ""
     
