@@ -12,6 +12,7 @@ struct Recipe: Identifiable {
     var ingredients: [Ingredient] = []
     let isFavourite: Bool
     let rating: Int
+    let serves: Int
     
     var id: String {
         name
