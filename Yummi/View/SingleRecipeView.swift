@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SingleRecipeView: View {
-    let recipe = Recipe()
+//    let recipe = Recipe()
     
     var body: some View {
         Text("recipe image")

@@ -15,7 +15,7 @@ struct RecipesView: View {
             List{
                 ForEach(recipesList) { recipe in
                     NavigationLink {
-                        SingleRecipeView(recipe)
+                        SingleRecipeView()
                     } label: {
                         Text(recipe.name)
                     }
