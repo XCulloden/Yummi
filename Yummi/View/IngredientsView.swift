@@ -18,7 +18,6 @@ struct IngredientsView: View {
     @State private var ingredientTypeInput = ""
     
     var body: some View {
-        Form{
             Text(ingredientList[ingredientIndex].displayStats()).multilineTextAlignment(.center)
             Button {
                 if ingredientIndex == ingredientList.count - 1 {
@@ -38,7 +37,7 @@ struct IngredientsView: View {
             } label: {
                 Text("previous")
             }
-        }
+        
         Form{
             
             Section(content: {Text("Import item:").fontWeight(.bold)
@@ -95,7 +94,7 @@ struct IngredientsView: View {
                 
             }
                     
-            ), header: { Text("Import item") }
+            )/*, header: { Text("Import item") }*/
         }
         }
         }

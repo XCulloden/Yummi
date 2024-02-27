@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Ingredient {
+struct Ingredient: Identifiable {
     let name: String
     var quantity: Int
     let expiry: String
     let type: String
+    
+    var id: String {
+        name
+    }
     
     func displayStats() -> String {
         
@@ -28,3 +32,4 @@ type: \(type)
         
     }
 }
+
