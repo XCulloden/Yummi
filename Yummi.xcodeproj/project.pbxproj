@@ -17,6 +17,7 @@
 		5B54A7A32B5FC5C800A6EF2D /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7A22B5FC5C800A6EF2D /* YummiUITests.swift */; };
 		5B54A7A52B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7A42B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift */; };
 		5B54A7B42B5FC8FF00A6EF2D /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */; };
+		5B5FD1FD2B90B44700FFAAEA /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FD1FC2B90B44700FFAAEA /* IngredientsViewModel.swift */; };
 		5BE200FC2B84B3AF0026ECF0 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE200FB2B84B3AF0026ECF0 /* IngredientsView.swift */; };
 		5BFA6E9C2B877DA400C113A1 /* SingleRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA6E9B2B877DA400C113A1 /* SingleRecipeView.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		5B54A7A22B5FC5C800A6EF2D /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		5B54A7A42B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B54A7B32B5FC8FF00A6EF2D /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		5B5FD1FC2B90B44700FFAAEA /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
 		5BE200FB2B84B3AF0026ECF0 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		5BFA6E9B2B877DA400C113A1 /* SingleRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		5B54A7852B5FC5C500A6EF2D /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
+				5B5FD1FB2B90B40600FFAAEA /* ViewModel */,
 				5B10E4332B6D580D0077E22B /* View */,
 				5B10E4322B6D58040077E22B /* Model */,
 				5B54A78A2B5FC5C700A6EF2D /* Assets.xcassets */,
@@ -158,6 +161,14 @@
 				5B54A7A42B5FC5C800A6EF2D /* YummiUITestsLaunchTests.swift */,
 			);
 			path = YummiUITests;
+			sourceTree = "<group>";
+		};
+		5B5FD1FB2B90B40600FFAAEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B5FD1FC2B90B44700FFAAEA /* IngredientsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				5B10E4352B6D58EC0077E22B /* Recipes.swift in Sources */,
 				5B54A7892B5FC5C500A6EF2D /* ContentView.swift in Sources */,
 				5BFA6E9C2B877DA400C113A1 /* SingleRecipeView.swift in Sources */,
+				5B5FD1FD2B90B44700FFAAEA /* IngredientsViewModel.swift in Sources */,
 				5B10E4312B6D57760077E22B /* RecipesView.swift in Sources */,
 				5B54A7872B5FC5C500A6EF2D /* YummiApp.swift in Sources */,
 			);

@@ -11,24 +11,34 @@ struct ContentView: View{
     @State private var isShowingView1: Bool = false
     
     var body: some View{
-        VStack{
-            Toggle("Show recipes", isOn: $isShowingView1)
-                .padding(.horizontal,100)
-            Spacer()
+        TabView{
             
-            if isShowingView1 {
-                RecipesView()
-            } else {
-                IngredientsView()
+            VStack{
+                
+                Toggle("Show recipes", isOn: $isShowingView1)
+                    .padding(.horizontal,100)
+                Spacer()
+                
+                if isShowingView1 {
+                    RecipesView()
+                } else {
+                    IngredientsView()
+                }
+                Spacer()
+                Spacer()
+                    
+                
+                
             }
-            Spacer()
-            Spacer()
-            
-            
+            .tabItem {
+                Label("Recipes", systemImage: "list.dash")
+            }
+            .tabItem {
+                Label ("ingredients", systemImage: "list.dash")
+            }
         }
     }
 }
-
 #Preview {
     ContentView()
 }

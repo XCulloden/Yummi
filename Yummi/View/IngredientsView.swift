@@ -9,30 +9,24 @@ import SwiftUI
 
 struct IngredientsView: View {
     
-    @State private var ingredientList = [Ingredient(name: "Aple", quantity: 9, expiry: "12,03,2007", type: "froot"),Ingredient(name: "Cow", quantity: 3, expiry: "03,27,2024", type: "meat"),Ingredient(name: "Chocolate", quantity: 5, expiry: "10,04,2025", type: "sweaty")]
-    @State private var ingredientIndex = 0
-    
-    @State private var ingredientNameInput = ""
-    @State private var ingredientCountInput = 1
-    @State private var ingredientDateInput = Date()
-    @State private var ingredientTypeInput = ""
+    @StateObject var ingredientsViewModel: IngredientsViewModel = IngredientsViewModel()
     
     var body: some View {
-            Text(ingredientList[ingredientIndex].displayStats()).multilineTextAlignment(.center)
+        Text(ingredientsViewModel.ingredientList[ingredientsViewModel.ingredientIndex].displayStats()).multilineTextAlignment(.center)
             Button {
-                if ingredientIndex == ingredientList.count - 1 {
-                    ingredientIndex = 0
+                if ingredientsViewModel.ingredientIndex == ingredientsViewModel.ingredientList.count - 1 {
+                    ingredientsViewModel.ingredientIndex = 0
                 } else {
-                    ingredientIndex += 1
+                    ingredientsViewModel.ingredientIndex += 1
                 }
             } label: {
                 Text("next")
             }
             Button {
-                if ingredientIndex == 0 {
-                    ingredientIndex = ingredientList.count - 1
+                if ingredientsViewModel.ingredientIndex == 0 {
+                    ingredientsViewModel.ingredientIndex = ingredientsViewModel.ingredientList.count - 1
                 } else {
-                    ingredientIndex -= 1
+                    ingredientsViewModel.ingredientIndex -= 1
                 }
             } label: {
                 Text("previous")
@@ -43,9 +37,9 @@ struct IngredientsView: View {
             Section(content: {Text("Import item:").fontWeight(.bold)
                 TextField(
                     "add ingredient",
-                    text: $ingredientNameInput
+                    text: $ingredientsViewModel.ingredientNameInput
                 )
-                Picker("type: ", selection: $ingredientTypeInput) {
+                Picker("type: ", selection: $ingredientsViewModel.ingredientTypeInput) {
                     Text("froot")
                     Text("vegeable")
                     Text("meat")
@@ -58,35 +52,28 @@ struct IngredientsView: View {
                 
                 DatePicker(
                     "Start Date",
-                    selection: $ingredientDateInput,
+                    selection: $ingredientsViewModel.ingredientDateInput,
                     displayedComponents: [.date]
                 )
                 Stepper(
-                    "count: \(ingredientCountInput)",
-                    value: $ingredientCountInput,
+                    "count: \(ingredientsViewModel.ingredientCountInput)",
+                    value: $ingredientsViewModel.ingredientCountInput,
                     in: 1...100,
                     step: 1
                 )
-                Picker("unit: ", selection: $ingredientTypeInput) {
-                    Text("litre")
+                Picker("unit: ", selection: $ingredientsViewModel.ingredientTypeInput) {
+                    Text("whole")
                     Text("gram")
                     Text("kilogram")
                     Text("millilitre")
                     Text("litre")
-                    Text("whole")
+                    Text("litre")
                     Text("mol")
                 }
                 
                 Button(action: {
                     
-                    let customIngredientName = ingredientNameInput
-                    let customIngredientCount = ingredientCountInput
-                    let customIngredientDate = ingredientDateInput
-                    let customIngredientType = ingredientTypeInput
-                    
-                    ingredientList.append(Ingredient(name: customIngredientName, quantity: customIngredientCount, expiry: "\(customIngredientDate)", type: customIngredientType))
-                    
-                    ingredientIndex = ingredientList.count - 1
+                    ingredientsViewModel.addNewIngredient()
                     
                 }, label: {
                     Text("Sumbmit Ingredient")
