@@ -13,29 +13,16 @@ struct ContentView: View{
     var body: some View{
         TabView{
             
-            VStack{
-                
-                Toggle("Show recipes", isOn: $isShowingView1)
-                    .padding(.horizontal,100)
-                Spacer()
-                
-                if isShowingView1 {
-                    RecipesView()
-                } else {
-                    IngredientsView()
+                RecipesView()
+                .tabItem {
+                    Label("Recipes", systemImage: "list.dash")
                 }
-                Spacer()
-                Spacer()
-                    
-                
-                
-            }
+                IngredientsView()
+            
             .tabItem {
-                Label("Recipes", systemImage: "list.dash")
+                Label ("ingredients", systemImage: "leaf.fill")
             }
-            .tabItem {
-                Label ("ingredients", systemImage: "list.dash")
-            }
+            
         }
     }
 }
