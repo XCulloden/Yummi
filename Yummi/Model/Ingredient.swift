@@ -12,6 +12,7 @@ struct Ingredient: Identifiable {
     var quantity: Int
     let expiry: String
     let type: String
+    let unit: String
     
     var id: String {
         name
@@ -25,6 +26,7 @@ struct Ingredient: Identifiable {
 quantity: \(quantity)
 expiry: \(expiry)
 type: \(type)
+unit: \(unit)
 
 
 """

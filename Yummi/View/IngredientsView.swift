@@ -11,10 +11,23 @@ struct IngredientsView: View {
     
     @StateObject var ingredientsViewModel: IngredientsViewModel = IngredientsViewModel()
     @State private var addingIngredient = false
+    @State private var unitSelection = ""
     
     var body: some View {
         Form{
-            Text(ingredientsViewModel.ingredientList[ingredientsViewModel.ingredientIndex].displayStats()).multilineTextAlignment(.center)
+            Section{
+                ForEach(ingredientsViewModel.ingredientList) { ingredient in
+                    HStack{
+                        Text(ingredient.name).bold().shadow(color: .blue, radius: 15)
+                        Spacer()
+                        Text(ingredient.type).foregroundStyle(.gray)
+                        Spacer()
+                        Text("\(ingredient.quantity)")
+                        Text(ingredient.unit)
+                        
+                    }
+                }
+            }
             Button {
                 if ingredientsViewModel.ingredientIndex == ingredientsViewModel.ingredientList.count - 1 {
                     ingredientsViewModel.ingredientIndex = 0
@@ -33,7 +46,7 @@ struct IngredientsView: View {
             } label: {
                 Text("previous")
             }
-        
+            
             Button {
                 addingIngredient.toggle()
             } label: {
@@ -47,14 +60,14 @@ struct IngredientsView: View {
                             text: $ingredientsViewModel.ingredientNameInput
                         )
                         Picker("type: ", selection: $ingredientsViewModel.ingredientTypeInput) {
-                            Text("froot")
-                            Text("vegeable")
-                            Text("meat")
-                            Text("spice")
-                            Text("source")
-                            Text("sweaty")
-                            Text("inedible")
-                            Text("illegal")
+                            Text("froot").tag("froot")
+                            Text("vegeable").tag("vegetable")
+                            Text("meat").tag("meat")
+                            Text("spice").tag("spice")
+                            Text("source").tag("source")
+                            Text("sweaty").tag("sweaty")
+                            Text("inedible").tag("inedible")
+                            Text("illegal").tag("illegal")
                         }
                         
                         DatePicker(
@@ -68,22 +81,23 @@ struct IngredientsView: View {
                             in: 1...100,
                             step: 1
                         )
-                        Picker("unit: ", selection: $ingredientsViewModel.ingredientTypeInput) {
-                            Text("whole")
-                            Text("gram")
-                            Text("kilogram")
-                            Text("millilitre")
-                            Text("litre")
-                            Text("litre")
-                            Text("mol")
+                        Picker("unit: ", selection: $ingredientsViewModel.ingredientUnitInput) {
+                            Text("whole").tag("whole")
+                            Text("gram").tag("gram")
+                            Text("kilogram").tag("kilogram")
+                            Text("millilitre").tag("millilitre")
+                            Text("litre").tag("litre")
+                            Text("mol").tag("mol")
                         }
                         
                         Button(action: {
                             
                             ingredientsViewModel.addNewIngredient()
+                            addingIngredient.toggle()
                             
                         }, label: {
                             Text("Sumbmit Ingredient")
+                            
                         })
                         
                     }
@@ -93,8 +107,8 @@ struct IngredientsView: View {
                 }
             }
         }
-        }
-        }
+    }
+}
 
 #Preview {
     IngredientsView()

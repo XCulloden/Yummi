@@ -17,7 +17,7 @@ struct RecipesView: View {
                     NavigationLink {
                         SingleRecipeView(recipe: recipe)
                     } label: {
-                        Text(recipe.name)
+                        Label(recipe.name, systemImage: "0\(recipe.rating).square.fill")
                     }
                     
                     
